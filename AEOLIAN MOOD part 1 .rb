@@ -1,3 +1,6 @@
+#by azertype 
+#IG azertype_ 
+#soudcloud & youtube: azertype
 
 #hat="F:/Fango/Desktop/sample pi/Travis Scott Drum Kit/Hats"
 hat= :drum_cymbal_closed
@@ -8,10 +11,6 @@ snare= :drum_snare_soft
 use_debug false
 use_bpm 145
 set_volume! 5
-
-
-#sample satan ,beat_stretch:8  ,amp:100
-
 
 in_thread do
   live_loop :melo1 do
@@ -26,7 +25,6 @@ in_thread do
 end
 
 
-
 in_thread do
   live_loop :bibi do
     stop
@@ -35,14 +33,12 @@ in_thread do
         sample hat,0
         sleep 0.5
       end
-      
-      sample hat,0
+       sample hat,0
       sleep 0.125
       sample hat,0
       sleep 0.125
       sample hat,0
-      
-      sleep 0.25
+       sleep 0.25
       sample hat,0
       sleep 0.5
       4.times do
@@ -64,6 +60,7 @@ in_thread do
     end
   end
 end
+
 in_thread do
   live_loop :snar do
     stop
@@ -77,6 +74,7 @@ in_thread do
       end
     end
   end
+  
   in_thread do
     live_loop :kik do
       stop
