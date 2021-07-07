@@ -1,2 +1,2 @@
 # Sonic-pi-
-sonic-pi code 
+Directory where I share the code of my creation with Sonic Pi
