@@ -1,3 +1,4 @@
+#By azertype 
 live_loop :melo  do
   
   
@@ -6,7 +7,7 @@ live_loop :melo  do
     with_fx :flanger ,feedback:0 do
       notes = (scale :gb3 ,:aeolian ,num_octaves:1).shuffle  #d1
       
-      with_fx :krush  ,cutoff:130 ,gain:rrand(1,3000)  do   #monté cutoff jusqu a 130 valeur de base 60
+      with_fx :krush  ,cutoff:130 ,gain:rrand(1,3000)  do   
         
         n = synth:piano,release:0,attack:4, sustain:0,note:notes.tick ,amp:1
         
