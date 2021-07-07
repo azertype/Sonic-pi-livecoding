@@ -1,4 +1,6 @@
-#By azertype 
+#by azertype 
+#IG azertype_ 
+#soudcloud & youtube: azertype
 live_loop :melo  do
   
   
