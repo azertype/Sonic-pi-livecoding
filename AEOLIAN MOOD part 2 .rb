@@ -1,4 +1,6 @@
-
+#by azertype 
+#IG azertype_ 
+#soudcloud & youtube: azertype
 
 #hat="F:/Fango/Desktop/sample pi/Travis Scott Drum Kit/Hats"
 hat= :drum_cymbal_closed
@@ -9,10 +11,6 @@ snare= :drum_snare_soft
 use_debug false
 use_bpm 145
 set_volume! 5
-
-
-
-
 
 in_thread do
   live_loop :bibi do
@@ -52,31 +50,29 @@ in_thread do
     end
   end
 end
+
 in_thread do
   live_loop :snar do
     density 1 do
-      
-      sleep 8
+       sleep 8
       at 2 do
         sample  snare,1 ,amp:5
       end
       at 6 do
         sample  snare,1,amp:5
       end
-      
-    end
+      end
   end
+  
   in_thread do
     live_loop :kik do
-      
       sleep 8
       at 0 do sample kik,0
       end
       at 1.5do sample kik,0
     end
     at 3 do sample kik,0
-      
-    end
+      end
     at 4.5 do sample kik,0
     end
     at 5 do sample kik,0
@@ -92,29 +88,23 @@ in_thread do
   end
 end
 end
-#sample "C:/Users/ji/Desktop/sample assielou",16 ,amp:20
 
 in_thread do
-  
-  live_loop :melo  do
+   live_loop :melo  do
     #decendre distor 0.8 ,0.5,0.2
     #d3
     #hat mettre effet et density 2
     #krush mix 0
-    tick_reset_all    #enlever sync
+    tick_reset_all  
     with_fx :distortion ,distort:0.9  do
       with_fx :flanger ,feedback:1 ,depth:1 ,wave:2 ,mix:0.3,amp:3 do # wave 1 wave 3
         notes = (scale :d4 ,:aeolian ,num_octaves:2).shuffle  #d1  #gb3
-        
         with_fx :krush  ,cutoff:130 ,gain:rrand(1,3000) ,mix:1  do   #toujours la ,monte cutoff jusqu a 130 valeur de base 60
           
           n = synth:piano,release:1,attack:0, sustain:0,note:notes.tick ,amp:5
-          
           #sleep (line ,0.225,2,steps:10).tick
-          
-          #control n, note:notes.tick ,amp:3
-          
-        end
+           #control n, note:notes.tick ,amp:3
+          end
         sleep 1
       end
     end
