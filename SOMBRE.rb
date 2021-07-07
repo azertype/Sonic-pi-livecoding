@@ -1,4 +1,4 @@
-precap="F:/Fango/Desktop/sample pi/sociétés precapitalistes_Ferderici.wav"
+precap="F:/Fango/Desktop/sample pi/sociÃ©tÃ©s precapitalistes_Ferderici.wav"
 sombre ="F:/Fango/Desktop/sample pi/SOMBRE.wav"
 triste="F:/Fango/Desktop/sample pi/TRISTE.wav"
 
@@ -32,8 +32,7 @@ live_loop :melo_hollow  do
         sync   "/live_loop/tempo"
         #control n, note:notes.look ,amp:1
         #control c, note:notes.look ,amp:0.5 # a metre quand on est en d2
-        
-      end
+        end
     end
   end
 end
@@ -54,7 +53,6 @@ live_loop :bibi do
       #sample  :bd_tek ,amp:2 ,rpitch:rrand(-15,10)
       #sample  :drum_tom_lo_soft ,rate:1 ,rate:1 ,rpitch:rrand(-50,10),amp:5 if (spread 2,5).look  #spread 25  #jouer avec rpitch 00 ,-10 ,10    -50 ,100
       #sample :bd_haus ,rate:0.1 ,compress:1 ,rpitch:3 ,amp:5 if (spread 2,5).look  # r pitch -15
-      
       # sleep 2 #avec mettre avec flanger mix 0.3 sans drum lo
     end
   end
